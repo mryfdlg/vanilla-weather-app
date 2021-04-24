@@ -10,17 +10,23 @@ h1 {
   max-width: 600px;
   background: #e6e6fa;
 }
+.form-control {
+  padding: 5px;
+  margin: 0 0 30px;
+  max-width: 200px;
+  border-radius: 10px 0 0 10px;
+}
 .search-button {
-  float: left;
   width: 20%;
-  padding: 8px 15px;
+  padding: 8px 10px;
   background: #2196f3;
   color: white;
-  font-size: 15px;
+  font-size: 13px;
   border: 1px solid grey;
   border-left: none;
   cursor: pointer;
-  margin-left: -1px;
+  margin-left: -50px;
+  border-radius: 0 10px 10px 0;
 }
 h1 {
   color: #000;
