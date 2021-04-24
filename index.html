@@ -13,9 +13,65 @@
 </head>
 <body>
     <div class="container">
-    <h1>Hello World</h1>
-    <button type="button" class="btn btn-primary">Click Me</button>
-    </div>
+        <div class="weather-app">
+        <form class="search-form" id="form-input"></form>
+        <div class="row">
+            <div class="col-5">
+                <input type="search" placeholder="Enter a city" autofocus="on" autocomplete="off" class="form-control shadow-sm"
+                    id="city-input" />
+            </div>
+            <div class="col-3">
+                <input id="city-input" type="submit" value="Search" class="form-control btn btn-primary shadow-sm" />
+            </div>
+            </form>
+      <h1 id="city-name">Toronto, ON</h1>
+      <ul>
+        <li id="date">Saturday, April 24</li>
+        <li id="time">13:34</li>
+        <div class="row">
+          <img class="weather-icon" id="weather-icon" src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_2-512.png" alt="Partly cloudy">
+          <h1 id="current-temp">21°C</h1>
+        </div>
+        <li id="weather-description">Partly Cloudy</li>
+      </ul>
+      <div class="row">
+        <div class="col-2">
+          <p class="text-center">Sun</p>
+          <img class="sun-icon" src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_3-512.png" alt="sun-icon">
+          <p class="text-center">22°C</p>
+        </div>
+        <div class="col-2">
+          <p class="text-center">Mon</p>
+          <img class="mon-icon" src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_3-512.png"
+            alt="mon-icon">
+          <p class="text-center">23°C</p>
+        </div>
+        <div class="col-2">
+          <p class="text-center">Tue</p>
+          <img class="tue-icon" src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_3-512.png"
+            alt="tue-icon">
+          <p class="text-center">24°C</p>
+        </div>
+        <div class="col-2">
+          <p class="text-center">Wed</p>
+          <img class="wed-icon" src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_17-512.png"
+            alt="wed-icon">
+          <p class="text-center">21°C</p>
+        </div>
+        <div class="col-2">
+          <p class="text-center">Thu</p>
+          <img class="thu-icon" src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_17-512.png"
+            alt="thu-icon">
+          <p class="text-center">19°C</p>
+        </div>
+        <div class="col-2">
+          <p class="text-center">Thu</p>
+          <img class="fri-icon" src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_17-512.png"
+            alt="fri-icon">
+          <p class="text-center">18°C</p>
+        </div>
+      </div>
+    </div></div>
     <script src="src/app.js"></script>
 </body>
 </html>
