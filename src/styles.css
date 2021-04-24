@@ -8,17 +8,17 @@ body {
   border-radius: 10px;
   max-width: 600px;
   background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 .form-control {
-  padding: 5px;
-  margin: 0 0 30px;
+  margin: 0 0 10px;
   max-width: 200px;
   border-radius: 5px 0 0 5px;
 }
 .search-button {
   width: 20%;
   padding: 8px 10px;
-  background: #2196f3;
+  background: #e0e0e0;
   color: white;
   font-size: 13px;
   border: 1px solid grey;
@@ -33,14 +33,14 @@ h1 {
   font-weight: 700;
   line-height: 28px;
   font-family: "Roboto", sans-serif;
-  padding: 0 0 10px 0;
+  padding: 20px 0 10px 0;
 }
 .weather-icon {
   height: 70px;
   width: 70px;
   margin-right: 10px;
   position: relative;
-  top: -15px;
+  top: -10px;
 }
 .current-temp {
   font-size: 64px;
@@ -75,8 +75,13 @@ li {
 .temps {
   padding: 30px 0;
 }
-.forecast {
-  padding: 30px 0;
+.days-of-week {
+  color: #606466;
+}
+.temp-for-week {
+  font-weight: bold;
+  color: #606466;
+  padding: 15px 0;
 }
 .sun-icon {
   height: 55px;
