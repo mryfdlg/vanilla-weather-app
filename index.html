@@ -8,6 +8,7 @@
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Weather App</title>
     <link rel="stylesheet" href="src/styles.css">
 </head>
@@ -16,24 +17,40 @@
         <div class="weather-app">
         <form class="search-form" id="form-input"></form>
         <div class="row">
-            <div class="col-5">
-                <input type="search" placeholder="Enter a city" autofocus="on" autocomplete="off" class="form-control shadow-sm"
+          <div class="col-sm">
+                <input type="search" placeholder="Enter a city" autofocus="on" autocomplete="off" class="form-control  shadow-sm"
                     id="city-input" />
-            </div>
-            <div class="col-3">
-                <input id="city-input" type="submit" value="Search" class="form-control btn btn-primary shadow-sm" />
-            </div>
+                    </div>
+            <div class="col-sm">
+            <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
             </form>
-      <h1 id="city-name">Toronto, ON</h1>
-      <ul>
-        <li id="date">Saturday, April 24</li>
-        <li id="time">13:34</li>
-        <div class="row">
-          <img class="weather-icon" id="weather-icon" src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_2-512.png" alt="Partly cloudy">
-          <h1 id="current-temp">21°C</h1>
+            </div>
+            </div>
+      <div class="row">
+      <div class="col-sm">
+        <h1 id="city-name">Toronto, ON</h1>
+        <ul>
+          <li id="date">Sat, April 24, 15:06</li>
+          <li id="weather-description">Partly Cloudy</li>
+      </div>
+      <div class="col-sm">
+        <div class="float-left">
+          <div class="clearfix">
+            <img src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_2-512.png" alt="Cloudy icon"
+              class="weather-icon float-left" />
+          <span class="temperature" id="temperature-degrees">20</span>
+          <span class="units"><a href="#" id="celcius">°C</a> | <a href="#" id="fahrenheit">°F</a></span>
         </div>
-        <li id="weather-description">Partly Cloudy</li>
-      </ul>
+      </div>
+      </div>
+      <div class="row">
+          <div class="col-6">
+            <ul>
+              <li id="humidity">Humidity: 27%</li>
+              <li id="wind">Wind: 8 km/h</li>
+            </ul>
+          </div>
+          </div>
       <div class="row">
         <div class="col-2">
           <p class="text-center">Sun</p>
