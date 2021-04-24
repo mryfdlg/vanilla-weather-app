@@ -15,40 +15,39 @@
 <body>
     <div class="container">
         <div class="weather-app">
+          <div class="row">
+          <li class="current-date" id="date"><small>Sat, April 24, 15:06</small></li>
+          </div>
         <form class="search-form" id="form-input"></form>
         <div class="row">
-          <div class="col-sm">
+          <div class="col-6">
                 <input type="search" placeholder="Enter a city" autofocus="on" autocomplete="off" class="form-control  shadow-sm"
                     id="city-input" />
                     </div>
-            <div class="col-sm">
+            <div class="col-6">
             <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
             </form>
             </div>
             </div>
+            <div class="temps">
       <div class="row">
       <div class="col-6">
         <h1 id="city-name">Toronto</h1>
         <ul>
-          <li id="date">Sat, April 24, 15:06</li>
-          <li id="weather-description">Partly Cloudy</li>
+          <li class="weather-desc" id="weather-description" style="padding-bottom: 1.5em">Partly Cloudy</li>
+            <li id="humidity" style="padding-bottom: 1.5em">Humidity: 27%</li>
+            <li id="wind" style="padding-bottom: 1.5em">Wind: 8 km/h</li>
+          </ul>
       </div>
       <div class="col-6">
-          <div class="clearfix">
+          <div class="clearfix weather-temp">
             <img src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_2-512.png" alt="Cloudy icon" class="weather-icon"/>
            <span class="current-temp">20</span>
-          <span class="units"><a href="#" id="celcius">°C</a> | <a href="#" id="fahrenheit">°F</a></span>
+          <span class="units"><a href="#" id="celcius"><small>°C</small></a> | <a href="#" id="fahrenheit"><small>°F</small></a></span>
         </div>
       </div>
-      </div>
-      <div class="row">
-          <div class="col-6">
-            <ul>
-              <li id="humidity">Humidity: 27%</li>
-              <li id="wind">Wind: 8 km/h</li>
-            </ul>
-          </div>
-          </div>
+      </div></div>
+      <div class="forecast">
       <div class="row">
         <div class="col-2">
           <p class="text-center">Sun</p>
@@ -84,12 +83,10 @@
           <img class="fri-icon" src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_17-512.png"
             alt="fri-icon">
           <p class="text-center">18°C</p>
-        </div>
+        </div></div>
       </div>
     </div></div>
-    <small>
     <a href="https://github.com/mryfdlg/vanilla-weather-app" target="_blank">Open source code</a> by Mary Fudolig
-    </small>
     <script src="src/app.js"></script>
 </body>
 </html>
