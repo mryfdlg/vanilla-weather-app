@@ -76,6 +76,14 @@ li {
 .temps {
   padding: 30px 0;
 }
+.weather-temp .active {
+  color: #606466;
+  cursor: default;
+  text-decoration: none;
+}
+.weather-temp .f-link {
+  text-decoration: none;
+}
 .days-of-week {
   color: #606466;
 }

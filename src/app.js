@@ -23,7 +23,6 @@ let currentMinutes = ("0" + date.getMinutes()).slice(-2);
 return `${currentDay} ${currentMonth} ${currentDate}, ${currentHours}:${currentMinutes}`;
 }
 function displayTemperature(response) {
-    console.log(response.data);
     let cityName = document.querySelector("#city");
     cityName.innerHTML = response.data.name;
 
@@ -45,6 +44,8 @@ function displayTemperature(response) {
     let iconElement = document.querySelector("#icon");
     iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`);
     iconElement.setAttribute("alt", response.data.weather[0].description);
+
+    celsiusTemp = response.data.main.temp;
 }
 function search(city) {
 let apiKey = "fcdc838ee1dab066d3dcd7fb3d434327";
@@ -56,5 +57,31 @@ function handleSubmit(event) {
     let cityInputElement = document.querySelector("#city-input");
     search(cityInputElement.value);
 }
+function displayFahrenheitTemp (event) {
+    event.preventDefault();
+    celsiusLink.classList.remove("active");
+    fahrenheitLink.classList.add("active");
+    let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+    let tempElement = document.querySelector("#temperature");
+    tempElement.innerHTML = Math.round(fahrenheitTemp);
+}
+function displayCelsiusTemp(event) {
+    event.preventDefault();
+    celsiusLink.classList.add("active");
+    fahrenheitLink.classList.remove("active");
+    let tempElement = document.querySelector("#temperature");
+    tempElement.innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null;
+
   let form = document.querySelector("#form-input");
   form.addEventListener("submit", handleSubmit);
+
+  let fahrenheitLink = document.querySelector("#fahrenheit");
+  fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+  let celsiusLink = document.querySelector("#celsius");
+  celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+  search("Toronto");
