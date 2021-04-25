@@ -107,3 +107,6 @@ li {
   height: 55px;
   width: 55px;
 }
+p {
+  text-align: center;
+}
