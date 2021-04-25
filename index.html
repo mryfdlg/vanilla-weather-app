@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
     <link rel="stylesheet" href="src/styles.css">
 </head>
@@ -22,7 +23,7 @@
                     id="city-input" />
                     </div>
             <div class="col-6">
-            <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+            <button type="submit" class="search-button" id="city-input"><i class="fa fa-search"></i></button>
             </form>
             </div>
             </div>
@@ -42,7 +43,7 @@
       <div class="col-6">
           <div class="clearfix weather-temp">
             <img src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_2-512.png" alt="Cloudy icon" class="weather-icon"/>
-           <span class="current-temp">20</span>
+           <span class="current-temp" id="temperature-degrees">20</span>
           <span class="units"><a href="#" id="celcius"><small>°C</small></a> | <a href="#" id="fahrenheit"><small>°F</small></a></span>
         </div>
       </div>
@@ -85,7 +86,7 @@
         </div>
         <div class="col-2">
           <div class="days-of-week">
-          <p class="text-center">Thu</p></div>
+          <p class="text-center">Fri</p></div>
           <img class="fri-icon" src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_17-512.png"
             alt="fri-icon">
           <div class="temp-for-week"><p class="text-center">18°C</p></div>
