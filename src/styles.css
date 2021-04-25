@@ -67,6 +67,7 @@ li {
   height: 19px;
   line-height: 1;
   list-style: none;
+  text-transform: capitalize;
 }
 .weather-icon {
   height: 90px;

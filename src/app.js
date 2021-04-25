@@ -4,6 +4,8 @@ function displayTemperature(response) {
     cityName.innerHTML = response.data.name;
     let temperatureDegrees = document.querySelector("#temperature");
     temperatureDegrees.innerHTML = Math.round(response.data.main.temp);
+    let weatherDesc = document.querySelector("#weather-description");
+    weatherDesc.innerHTML = response.data.weather[0].description;
 }
   let apiKey = "fcdc838ee1dab066d3dcd7fb3d434327";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
