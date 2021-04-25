@@ -36,9 +36,25 @@ function searchLocation(position) {
 
 let now = new Date();
 let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-let currentDate = days[now.getDay()];
+let currentDay = days[now.getDay()];
+let currentDate = now.getDates();
+let months = [
+  "Jan",
+  "Feb",
+  "March",
+  "Apr",
+  "May",
+  "June",
+  "July",
+  "Aug",
+  "Sept",
+  "Oct",
+  "Nov",
+  "Dec"
+];
+let currentMonth = months[now.getMonth()];
 let currentHours = ("0" + now.getHours()).slice(-2);
 let currentMinutes = ("0" + now.getMinutes()).slice(-2);
 
 let dateTime = document.querySelector("#date");
-dateTime.innerHTML = `${currentDate} ${currentHours}:${currentMinutes}`;
+dateTime.innerHTML = `${currentDay} ${currentMonth} ${currentDate}, ${currentHours}:${currentMinutes}`;
