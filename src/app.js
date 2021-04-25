@@ -1,38 +1,13 @@
-function showWeatherInfo(response) {
-  document.querySelector("#city-name").innerHTML = response.data.name;
-  document.querySelector("#temperature-degrees").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#weather-description").innerHTML =
-    response.data.weather[0].description;
-  document.querySelector(
-    "#precipitation"
-  ).innerHTML = `Precipitation: ${response.data.main.precipitation}%`;
-  document.querySelector("#wind").innerHTML = `Wind: ${Math.round(
-    response.data.wind.speed
-  )} km/h`;
+function displayTemperature(response) {
+    console.log(response.data);
+    let cityName = document.querySelector("#city");
+    cityName.innerHTML = response.data.name;
+    let temperatureDegrees = document.querySelector("#temperature");
+    temperatureDegrees.innerHTML = Math.round(response.data.main.temp);
 }
-function citySearch(city) {
   let apiKey = "fcdc838ee1dab066d3dcd7fb3d434327";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showWeatherInfo);
-}
-function handleSubmit(event) {
-  event.preventDefault();
-  let city = document.querySelector("#city-input").value;
-  citySearch(city);
-}
-let searchedCity = document.querySelector("#form-input");
-searchedCity.addEventListener("submit", handleSubmit);
-
-function searchLocation(position) {
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let apiKey = "fcdc838ee1dab066d3dcd7fb3d434327";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon${lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showWeatherInfo);
-  axios.get(apiUrl).then(citySearch);
-}
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
 
 let now = new Date();
 let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
