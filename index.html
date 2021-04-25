@@ -16,17 +16,26 @@
 <body>
     <div class="container">
         <div class="weather-app">
-        <form class="search-form" id="form-input"></form>
+        <form class="search-form" id="form-input">
         <div class="row">
           <div class="col-6">
-                <input type="search" placeholder="Enter a city" autofocus="on" autocomplete="off" class="form-control  shadow-sm"
-                    id="city-input" />
-                    </div>
+                <input type="search" 
+                placeholder="Enter a city" 
+                autofocus="on" 
+                autocomplete="off" 
+                class="form-control  shadow-sm"
+                id="city-input" />
+                </div>
             <div class="col-6">
-              <input id="city-input" type="submit" value="Search" class="form-control btn btn-primary shadow-sm" />
+              <button type="submit" 
+              class="search-button" 
+              id="city-search">
+              <i class="fa fa-search"></i>
+            </button>
             </form>
             </div>
             </div>
+          </form>
             <div class="row">
               <li class="current-date" id="date"><small>Sat, April 24, 15:06</small></li>
               </div>
