@@ -45,6 +45,7 @@ h1 {
   margin-right: 10px;
   position: relative;
   top: -10px;
+  width: 100px;
 }
 .current-temp {
   font-size: 70px;
