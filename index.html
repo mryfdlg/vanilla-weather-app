@@ -16,25 +16,26 @@
 <body>
     <div class="container">
         <div class="weather-app">
+          <div class="top-half">
+          <div class="row">
+            <div class="col-5"></div>
+          <div class="col-4">
         <form class="search-form" id="form-input">
-        <div class="row">
-          <div class="col-6">
                 <input type="search" 
                 placeholder="Enter a city" 
                 autofocus="on" 
                 autocomplete="off" 
                 class="form-control  shadow-sm"
                 id="city-input" />
-                </div>
-            <div class="col-6">
+              </div>
+            <div class="col-2">
               <button type="submit" 
               class="search-button" 
               id="city-search">
               <i class="fa fa-search"></i>
             </button>
+            </div>
             </form>
-            </div>
-            </div>
           </form>
             <div class="row">
               <li class="current-date" id="date"><small>Sat, April 24, 15:06</small></li>
@@ -51,18 +52,15 @@
       </div>
       <div class="col-6">
           <div class="clearfix weather-temp">
-            <img src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_2-512.png" alt="Cloudy icon" class="weather-icon" id="icon" />
+          <img src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_2-512.png" alt="Cloudy icon" class="weather-icon" id="icon" />
            <span class="current-temp" id="temperature">20</span>
           <span class="units"><a href="#" id="celsius" class="active"><small>°C</small></a> | <a href="#" id="fahrenheit" class="f-link"><small>°F</small></a></span>
         </div>
       </div>
       </div></div>
+      </div>
       <div class="weather-forecast" id="forecast">
-        <div class="col-2">
-          <div class="days-of-week">Sun</div>
-          <img src="http://openweathermap.org/img/wn/01d.png" alt=""/>
-          <div class="temp-for-week">22°C</div>
-        </div>
+      </div>
       </div></div>
     </div>
     <p><a href="https://github.com/mryfdlg/vanilla-weather-app" target="_blank">Open source code</a> by Mary Fudolig hosted on <a href="https://pensive-bartik-c4c27d.netlify.app/" target="_blank">Netlify</a></p>

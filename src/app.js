@@ -115,9 +115,9 @@ let celsiusTemp = null;
       forecastHTML = forecastHTML + 
       `
         <div class="col-2">
-          <div class="days-of-week">${formatForecastDay(forecastDay.dt)}</div>
-          <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" width="55"/>
-          <div class="temp-for-week">${Math.round(forecastDay.temp.day)} °</div>
+          <div class="days-of-week"><p class="text-center">${formatForecastDay(forecastDay.dt)}</p></div>
+          <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt=""/>
+          <div class="temp-for-week"><p class="text-center">${Math.round(forecastDay.temp.day)} °C</p></div>
         </div>
     `
         }

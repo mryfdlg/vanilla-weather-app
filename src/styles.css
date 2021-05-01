@@ -3,50 +3,53 @@ body {
 }
 .weather-app {
   border: 1px solid #dadde1;
-  padding: 50px;
-  margin: 30px auto;
+  margin: 20px auto;
   border-radius: 10px;
-  max-width: 600px;
-  background: #fff;
+  max-width: 700px;
+  padding: 10px 50px 10px 30px;
+  background: linear-gradient(180deg, rgba(77, 197, 237, 0.1) 50%, #fff 50%);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 .form-control {
   margin: 0 0 10px;
-  max-width: 200px;
+  max-width: 150px;
   border-radius: 5px 0 0 5px;
+  height: 24px;
 }
 .search-button {
   width: 20%;
-  padding: 8px 10px;
+  height: 24px;
+  padding: 2px 5px;
   background: #e0e0e0;
   color: white;
   font-size: 13px;
   border: 1px solid grey;
   border-left: none;
   cursor: pointer;
-  margin-left: -61px;
   border-radius: 0 5px 5px 0;
+  transition: ease-in-out;
+}
+.search-button:hover {
+  background-color: #c4c4c9;
 }
 h1 {
-  color: #43b2f8;
+  color: #103842;
   font-size: 45px;
   font-weight: 700;
   line-height: 28px;
   font-family: "Roboto", sans-serif;
-  padding: 20px 0 10px 0;
+  padding: 10px 0 10px 0;
 }
 .weather-icon {
-  height: 70px;
-  width: 70px;
   margin-right: 10px;
   position: relative;
   top: -10px;
 }
 .current-temp {
-  font-size: 64px;
+  font-size: 70px;
   font-weight: 400;
   line-height: 1;
-  color: #43b2f8;
+  color: #103842;
 }
 .units {
   position: relative;
@@ -70,7 +73,7 @@ li {
   text-transform: capitalize;
 }
 .temps {
-  padding: 30px 0;
+  padding: 20px 0;
 }
 .weather-temp .active {
   color: #606466;
@@ -81,11 +84,11 @@ li {
   text-decoration: none;
 }
 .days-of-week {
-  color: #606466;
+  color: #103842;
 }
 .temp-for-week {
   font-weight: bold;
-  color: #606466;
+  color: #103842;
   padding: 15px 0;
 }
 p {
