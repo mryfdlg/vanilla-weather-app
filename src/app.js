@@ -85,3 +85,22 @@ let celsiusTemp = null;
   celsiusLink.addEventListener("click", displayCelsiusTemp);
 
   search("Toronto");
+
+  function displayForecast() {
+      let forecastElement  = document.querySelector("#forecast");
+      let forecastHTML = `<div class="row">`;
+      let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+      days.forEach(function(day) {
+      forecastHTML = forecastHTML + 
+      `
+        <div class="col-2">
+          <div class="days-of-week">${day}</div>
+          <img src="http://openweathermap.org/img/wn/01d.png" alt=""/>
+          <div class="temp-for-week">22°C</div>
+        </div>
+    `
+      });
+      forecastHTML = forecastHTML + `</div>`;
+      forecastElement.innerHTML = forecastHTML;
+  }
+displayForecast();
